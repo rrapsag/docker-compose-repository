@@ -1,6 +1,6 @@
 up:
 	clear
-	@mkdir ./media
+	@mkdir -p ./media
 	@docker-compose up -d
 
 down:
