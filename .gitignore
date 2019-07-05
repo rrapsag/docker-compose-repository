@@ -1,5 +1,6 @@
 data/
 config/
 media/
+shared/
 .vscode/
 .DS_Store
