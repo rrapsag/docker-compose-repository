@@ -1,0 +1,45 @@
+version: '3.7'
+
+services:
+  owncloud:
+    image: owncloud/server:latest
+    container_name: owncloud
+    ports:
+      - 80:8080
+    depends_on:
+      - db
+      - redis
+    environment:
+      OWNCLOUD_DOMAIN: localhost
+      OWNCLOUD_DB_TYPE: mysql
+      OWNCLOUD_DB_NAME: owncloud
+      OWNCLOUD_DB_USERNAME: owncloud
+      OWNCLOUD_DB_PASSWORD: owncloud
+      OWNCLOUD_DB_HOST: db
+      OWNCLOUD_ADMIN_USERNAME: admin
+      OWNCLOUD_ADMIN_PASSWORD: admin
+      OWNCLOUD_MYSQL_UTF8MB4: "true"
+      OWNCLOUD_REDIS_ENABLED: "true"
+      OWNCLOUD_REDIS_HOST: redis
+    volumes:
+      - ./data/owncloud:/mnt/data
+  db:
+    image: webhippie/mariadb:latest
+    container_name: db
+    environment:
+      MARIADB_ROOT_PASSWORD: owncloud
+      MARIADB_USERNAME: owncloud
+      MARIADB_PASSWORD: owncloud
+      MARIADB_DATABASE: owncloud
+      MARIADB_MAX_ALLOWED_PACKET: 128M
+      MARIADB_INNODB_LOG_FILE_SIZE: 64M
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+      - ./data/backup:/var/lib/backup
+  redis:
+    image: redis:latest
+    container_name: redis
+    environment:
+      REDIS_DATABASES: 1
+    volumes:
+      - ./data/redis:/var/lib/redis
