@@ -1,6 +1,6 @@
 up:
 	clear
-	@mkdir -p ./data ./nextcloud
+	@mkdir -p ./data
 	@docker-compose up -d
 
 down:
