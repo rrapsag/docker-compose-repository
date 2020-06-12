@@ -14,6 +14,7 @@ Repositório agrupando diversos exemplos de ambientes utilizando Docker e Docker
 * [PostgreSQL - Relational Database](https://www.postgresql.org/docs/)
 * [Samba - Windows Interoperability](https://www.samba.org/samba/docs/)
 * [WordPress - Blog Tool](https://wordpress.org/news/)
+* [Jenkins - Automation Server](https://www.jenkins.io/)
 
 
 Para utilização de todos os ambientes, é necessário que o Docker e o Docker Compose estejam instalados no Linux.
