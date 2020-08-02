@@ -12,6 +12,7 @@ Repositório agrupando diversos exemplos de ambientes utilizando Docker e Docker
 * [Nextcloud - Cloud Storage Service](https://docs.nextcloud.com/)
 * [ownCloud - Cloud Storage Service](https://owncloud.org/help/)
 * [PostgreSQL - Relational Database](https://www.postgresql.org/docs/)
+* [Redis - Data Structure Store](https://redis.io/documentation)
 * [Samba - Windows Interoperability](https://www.samba.org/samba/docs/)
 * [WordPress - Blog Tool](https://wordpress.org/news/)
 * [Jenkins - Automation Server](https://www.jenkins.io/)
