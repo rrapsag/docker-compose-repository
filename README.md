@@ -4,8 +4,11 @@
 
 Repositório agrupando diversos exemplos de ambientes utilizando Docker e Docker-Compose. Abaixo estão listados as opções de ambientes disponíveis:
 
+* [Elasticsearch - Search Engine](https://www.elastic.co/guide/index.html)
 * [Emby - Media Server](https://emby.media/blog.html)
+* [GitLab - Source Code Management](https://docs.gitlab.com/)
 * [Gogs - Git Service](https://gogs.io/docs)
+* [Jenkins - Automation Server](https://www.jenkins.io/doc/book/)
 * [MariaDB - Relational Database](https://mariadb.org/documentation/)
 * [MongoDB - Document Database](https://docs.mongodb.com/manual/)
 * [MySQL - Relational Database](https://dev.mysql.com/doc/)
@@ -15,7 +18,6 @@ Repositório agrupando diversos exemplos de ambientes utilizando Docker e Docker
 * [Redis - Data Structure Store](https://redis.io/documentation)
 * [Samba - Windows Interoperability](https://www.samba.org/samba/docs/)
 * [WordPress - Blog Tool](https://wordpress.org/news/)
-* [Jenkins - Automation Server](https://www.jenkins.io/)
 
 
 Para utilização de todos os ambientes, é necessário que o Docker e o Docker Compose estejam instalados no Linux.
