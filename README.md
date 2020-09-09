@@ -17,6 +17,7 @@ Repositório agrupando diversos exemplos de ambientes utilizando Docker e Docker
 * [PostgreSQL - Relational Database](https://www.postgresql.org/docs/)
 * [Redis - Data Structure Store](https://redis.io/documentation)
 * [Samba - Windows Interoperability](https://www.samba.org/samba/docs/)
+* [SQL Server Linux - Relational Database](https://docs.microsoft.com/pt-br/sql/linux)
 * [WordPress - Blog Tool](https://wordpress.org/news/)
 
 
