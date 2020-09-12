@@ -9,6 +9,7 @@ Repositório agrupando diversos exemplos de ambientes utilizando Docker e Docker
 * [GitLab - Source Code Management](https://docs.gitlab.com/)
 * [Gogs - Git Service](https://gogs.io/docs)
 * [Jenkins - Automation Server](https://www.jenkins.io/doc/book/)
+* [MailHog - Email Testing Tool](https://github.com/mailhog/MailHog)
 * [MariaDB - Relational Database](https://mariadb.org/documentation/)
 * [MongoDB - Document Database](https://docs.mongodb.com/manual/)
 * [MySQL - Relational Database](https://dev.mysql.com/doc/)
