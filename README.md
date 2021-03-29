@@ -15,6 +15,7 @@ Repositório agrupando diversos exemplos de ambientes utilizando Docker e Docker
 * [MySQL - Relational Database](https://dev.mysql.com/doc/)
 * [Nextcloud - Cloud Storage Service](https://docs.nextcloud.com/)
 * [ownCloud - Cloud Storage Service](https://owncloud.org/help/)
+* [Portainer - Container Manager](https://documentation.portainer.io/)
 * [PostgreSQL - Relational Database](https://www.postgresql.org/docs/)
 * [Redis - Data Structure Store](https://redis.io/documentation)
 * [Samba - Windows Interoperability](https://www.samba.org/samba/docs/)
