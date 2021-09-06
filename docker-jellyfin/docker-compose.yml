@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin
+    hostname: jellyfin
+    user: 1000:1000
+    ports:
+      - 80:8096
+    environment:
+      - JELLYFIN_PublishedServerUrl=http://jellyfin.example.com
+    volumes:
+      - ./data/config:/config
+      - ./data/cache:/cache
+      - ./data/media:/media
+      - ./data/media2:/media2:ro
+    restart: unless-stopped

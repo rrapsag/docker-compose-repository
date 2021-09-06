@@ -8,6 +8,7 @@ Repositório agrupando diversos exemplos de ambientes utilizando Docker e Docker
 * [Emby - Media Server](https://emby.media/blog.html)
 * [GitLab - Source Code Management](https://docs.gitlab.com/)
 * [Gogs - Git Service](https://gogs.io/docs)
+* [Jellyfin - Media Server](https://jellyfin.org/docs/)
 * [Jenkins - Automation Server](https://www.jenkins.io/doc/book/)
 * [MailHog - Email Testing Tool](https://github.com/mailhog/MailHog)
 * [MariaDB - Relational Database](https://mariadb.org/documentation/)
