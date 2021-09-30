@@ -1,6 +1,6 @@
 up:
 	clear
-	@mkdir -p ./.client
+	@mkdir -p ./data/client
 	@docker-compose up -d
 
 down:
@@ -14,6 +14,10 @@ restart:
 ps:
 	clear
 	@docker-compose ps
+
+console:
+	clear
+	@docker exec -it mongodb mongosh
 
 logs:
 	clear

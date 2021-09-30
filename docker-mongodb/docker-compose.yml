@@ -4,19 +4,23 @@ services:
   db:
     image: mongo:latest
     container_name: mongodb
+    hostname: mongodb
     ports:
       - 27017:27017
     environment:
       - MONGO_DATA_DIR=/data/db
       - MONGO_LOG_DIR=/dev/null
     volumes:
-      - ./data/:/data/db
+      - ./data/db:/data/db
+      - ./data/configdb:/data/configdb
+    restart: unless-stopped
   mongoclient:
     image: mongoclient/mongoclient:latest
     container_name: mongoclient
     depends_on:
       - db
     ports:
-      - 80:3000
+      - 3000:3000
     volumes:
-      - ./.client:/data/db
+      - ./data/client:/data/db
+    restart: unless-stopped
