@@ -23,6 +23,7 @@ Repositório agrupando diversos exemplos de ambientes utilizando Docker e Docker
 * [Samba - Windows Interoperability](https://www.samba.org/samba/docs/)
 * [SQL Server Linux - Relational Database](https://docs.microsoft.com/pt-br/sql/linux)
 * [WordPress - Blog Tool](https://wordpress.org/news/)
+* [Homer - Personal Dashboard](https://github.com/bastienwirtz/homer/)
 
 
 Para utilização de todos os ambientes, é necessário que o Docker e o Docker Compose estejam instalados no Linux.
