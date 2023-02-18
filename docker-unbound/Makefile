@@ -1,6 +1,5 @@
 up:
 	clear
-	mkdir -pv ./data
 	@docker-compose up -d
 
 down:
