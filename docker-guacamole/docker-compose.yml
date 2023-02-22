@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  guacamole:
+    image: oznu/guacamole
+    container_name: guacamole
+    hostname: guacamole
+    ports:
+      - 8080:8080
+    volumes:
+      - ./data:/config
+    restart: unless-stopped
