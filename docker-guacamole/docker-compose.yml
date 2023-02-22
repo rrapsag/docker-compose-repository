@@ -1,3 +1,6 @@
+# Apache Guacamole
+# Usuário: guacadmin
+# Senha: guacadmin
 version: '3.7'
 
 services:
