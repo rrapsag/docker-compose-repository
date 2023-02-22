@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  win2000:
+    image: docker.io/hectorm/qemu-win2000:latest
+    container_name: win2000
+    hostname: win2000
+    ports:
+      - 3389:3389 # RDP
+      - 5900:5900 # VNC
+      - 6080:6080 # noVNC
+    volumes:
+      - ./data:/mnt
+    restart: unless-stopped
