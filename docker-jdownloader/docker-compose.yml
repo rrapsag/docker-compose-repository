@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  jdownloader:
+    image: jaymoulin/jdownloader:latest
+    container_name: jdownloader
+    hostname: jdownloader
+    #user: 1000:1000
+    ports:
+      - 3129:3129
+    environment:
+      MYJD_USER: user # Usuário https://my.jdownloader.org
+      MYJD_PASSWORD: password # Senha https://my.jdownloader.org
+      MYJD_DEVICE_NAME: docker
+      XDG_DOWNLOAD_DIR: /opt/JDownloader/Downloads # opcional
+    volumes:
+      - ./data/config:/opt/JDownloader/app/cfg
+      - ./data/downloads:/opt/JDownloader/Downloads
+    restart: unless-stopped
