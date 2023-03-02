@@ -29,6 +29,7 @@ Repositório agrupando diversos exemplos de ambientes utilizando Docker e Docker
 * [Windows 2000 - Operating System](https://github.com/hectorm/docker-qemu-win2000)
 * [Apache Guacamole - Remote Desktop Gateway](https://guacamole.incubator.apache.org/doc/gug/)
 * [Whoogle - Search Engine](https://github.com/benbusby/whoogle-search)
+* [File Browser - File Manager](https://filebrowser.org/)
 
 
 Para utilização de todos os ambientes, é necessário que o Docker e o Docker Compose estejam instalados no Linux.
