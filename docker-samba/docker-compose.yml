@@ -1,21 +1,14 @@
-#
-# https://hub.docker.com/r/dperson/samba
-#
-version: '3.7'
-
+---
 services:
   samba:
-    image: dperson/samba:latest
+    image: rrapsag/samba:latest
     container_name: samba
     ports:
-      - "137:137/udp"
-      - "138:138/udp"
-      - "139:139/tcp"
       - "445:445/tcp"
     environment:
-      - TZ='America/Sao_Paulo'
+      USER: samba
+      PASS: samba
+      #UID: 1000 # optional
+      #GID: 1000 # optional
     volumes:
-      - ./shared:/shares/shared
-    command: -n -p -u "cgaspar;123456"
-      -s "shared;/shares/shared;yes;no;yes;all;none;;Pasta Compartilhada"
-      #-s "shared;/shares/shared;yes;no;no;cgaspar;none;;Pasta Compartilhada"
+      - ./storage:/storage

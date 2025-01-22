@@ -1,6 +1,6 @@
 up:
 	clear
-	@mkdir -p ./shared
+	@mkdir -p ./storage
 	@docker-compose up -d
 
 down:
