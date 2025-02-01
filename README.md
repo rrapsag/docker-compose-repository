@@ -32,6 +32,7 @@ Repositório agrupando diversos exemplos de ambientes utilizando Docker e Docker
 * [File Browser - File Manager](https://filebrowser.org/)
 * [JDownloader - Download Management Tool](https://jdownloader.org/)
 * [Uptime Kuma - Monitoring Tool](https://github.com/louislam/uptime-kuma/wiki)
+* [Watchtower - Container Image Update](https://containrrr.dev/watchtower/)
 
 
 Para utilização de todos os ambientes, é necessário que o Docker e o Docker Compose estejam instalados no Linux.
