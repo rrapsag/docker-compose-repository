@@ -34,6 +34,7 @@ Repositório agrupando diversos exemplos de ambientes utilizando Docker e Docker
 * [Uptime Kuma - Monitoring Tool](https://github.com/louislam/uptime-kuma/wiki)
 * [Watchtower - Container Image Update](https://containrrr.dev/watchtower/)
 * [Snippet Box - Simple Code Snippet Organizer](https://github.com/pawelmalak/snippet-box)
+* [PhotoPrism - Photo App](https://www.photoprism.app)
 
 
 Para utilização de todos os ambientes, é necessário que o Docker e o Docker Compose estejam instalados no Linux.

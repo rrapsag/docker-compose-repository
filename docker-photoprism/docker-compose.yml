@@ -1,0 +1,24 @@
+---
+services:
+  photoprism:
+    image: photoprism/photoprism:latest
+    container_name: photoprism
+    hostname: photoprism
+    ports:
+      - 2342:2342
+    environment:
+      PHOTOPRISM_UID: 1000
+      PHOTOPRISM_GID: 984
+      PHOTOPRISM_ADMIN_USER: "admin"
+      PHOTOPRISM_ADMIN_PASSWORD: "photoprism"
+      PHOTOPRISM_AUTH_MODE: "password"
+      PHOTOPRISM_SITE_URL: "http://localhost:2342/"
+    #  PHOTOPRISM_DATABASE_DRIVER: "mysql"
+    #  PHOTOPRISM_DATABASE_SERVER: "mariadb:4001"
+    #  PHOTOPRISM_DATABASE_NAME: "photoprism"
+    #  PHOTOPRISM_DATABASE_USER: "root"
+    #  PHOTOPRISM_DATABASE_PASSWORD: "photoprism"
+    volumes:
+      - ./media:/photoprism/originals
+      - ./data:/photoprism/storage
+    restart: unless-stopped
