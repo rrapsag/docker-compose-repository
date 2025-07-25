@@ -11,7 +11,7 @@ services:
       APP_ENV: local # local, production
       APP_DEBUG: false
       APP_URL: http://localhost:8000
-      APP_KEY: base64:M7GKBLJ4+XixvCYXcfsiBLD+2jOumRGIbNG94797xjw=
+      APP_KEY: 
       APP_TIMEZONE: America/Sao_Paulo
       DB_CONNECTION: sqlite
       DB_DATABASE: "/2fauth/sqlite.db"
