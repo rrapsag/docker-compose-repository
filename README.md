@@ -36,6 +36,7 @@ Repositório agrupando diversos exemplos de ambientes utilizando Docker e Docker
 * [Snippet Box - Simple Code Snippet Organizer](https://github.com/pawelmalak/snippet-box)
 * [PhotoPrism - Photo App](https://www.photoprism.app)
 * [Heimdall - Application Dashboard](https://heimdall.site/)
+* [2FAuth - Two-Factor Authentication](https://2fauth.app/)
 
 
 Para utilização de todos os ambientes, é necessário que o Docker e o Docker Compose estejam instalados no Linux.

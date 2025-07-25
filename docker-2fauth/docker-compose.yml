@@ -1,0 +1,26 @@
+---
+services:
+  2fauth:
+    image: 2fauth/2fauth:latest
+    container_name: 2fauth
+    hostname: 2fauth
+    ports:
+      - 8000:8000
+    environment:
+      APP_NAME: 2FAuth
+      APP_ENV: local # local, production
+      APP_DEBUG: false
+      APP_URL: http://localhost:8000
+      APP_KEY: base64:M7GKBLJ4+XixvCYXcfsiBLD+2jOumRGIbNG94797xjw=
+      APP_TIMEZONE: America/Sao_Paulo
+      DB_CONNECTION: sqlite
+      DB_DATABASE: "/2fauth/sqlite.db"
+      #MAIL_HOST: smtp.mailtrap.io
+      #MAIL_PORT: 2525
+      #MAIL_FROM_ADDRESS: null
+      #MAIL_FROM_NAME: null
+      #MAIL_USERNAME: null
+      #MAIL_PASSWORD: null
+    volumes:
+      - ./data:/2fauth
+    restart: unless-stopped
