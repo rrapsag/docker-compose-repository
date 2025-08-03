@@ -1,0 +1,23 @@
+---
+services:
+  metube:
+    image: ghcr.io/alexta69/metube
+    container_name: metube
+    hostname: metube
+    ports:
+      - 8081:8081
+    environment:
+      UID: 1000
+      GID: 968
+      DOWNLOAD_MODE: limited # sequential, concurrent, limited
+      MAX_CONCURRENT_DOWNLOADS: 3
+      DOWNLOAD_DIR: /downloads
+    volumes:
+      - ./data/downloads:/downloads
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8081 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 60s
+    restart: unless-stopped
