@@ -3,6 +3,15 @@ services:
   watchtower:
     image: containrrr/watchtower:latest
     container_name: watchtower
+    environment:
+      TZ: 'America/Sao_Paulo'
+      WATCHTOWER_CLEANUP: true
+      WATCHTOWER_REMOVE_VOLUMES: false
+      WATCHTOWER_INCLUDE_RESTARTING: true
+      WATCHTOWER_LABEL_ENABLE: false
+    labels:
+      # Adicionar ao Container será atualizado
+      - "com.centurylinklabs.watchtower.enable=true" 
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     restart: unless-stopped
