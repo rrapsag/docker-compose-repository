@@ -23,4 +23,10 @@ services:
       #MAIL_PASSWORD: null
     volumes:
       - ./data:/2fauth
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q http://localhost:8000 -O /dev/null || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 60s
     restart: unless-stopped

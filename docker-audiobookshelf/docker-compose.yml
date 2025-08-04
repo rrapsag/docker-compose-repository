@@ -14,4 +14,10 @@ services:
       - ./data/metadata:/metadata
       - ./data/media/audiobooks:/audiobooks
       - ./data/media/podcasts:/podcasts
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q http://localhost/ping -O /dev/null || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 60s
     restart: unless-stopped

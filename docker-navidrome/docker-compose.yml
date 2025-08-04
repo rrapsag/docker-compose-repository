@@ -9,6 +9,7 @@ services:
     ports:
       - 80:4533
     environment:
+      ND_MUSICFOLDER: /music
       ND_SCANSCHEDULE: 1h
       ND_LOGLEVEL: info
       ND_SESSIONTIMEOUT: 24h
@@ -16,4 +17,10 @@ services:
     volumes:
       - ./data/config:/data
       - ./data/media:/music:ro
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "-", "http://localhost:4533/ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 20s
     restart: unless-stopped
