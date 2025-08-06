@@ -39,6 +39,7 @@ Repositório agrupando diversos exemplos de ambientes utilizando Docker e Docker
 * [2FAuth - Two-Factor Authentication](https://2fauth.app/)
 * [Audiobookshelf - Audiobook and Podcast Server](https://www.audiobookshelf.org/)
 * [Metube - Youtube Downloader](https://github.com/alexta69/metube)
+* [Calibre - E-book Management](https://calibre-ebook.com/)
 
 
 Para utilização de todos os ambientes, é necessário que o Docker e o Docker Compose estejam instalados no Linux.

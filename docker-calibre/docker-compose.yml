@@ -1,0 +1,28 @@
+---
+services:
+  calibre:
+    image: ghcr.io/linuxserver/calibre:latest
+    container_name: calibre
+    hostname: calibre
+    ports:
+      - 8181:8181 # https
+      - 8081:8081 # # Calibre webserver gui
+      #- 8080:8080 # reverse proxy access
+    environment:
+      PUID: 1000
+      PGID: 1000
+      TZ: 'America/Sao_Paulo'
+      #CUSTOM_USER: user
+      #PASSWORD: passwd
+    volumes:
+      - ./data/config:/config
+      - ./data/uploads:/uploads
+      - ./data/plugins:/plugins
+      - ./data/books:/Calibre_Library
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 8181 || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 60s
+    restart: unless-stopped
