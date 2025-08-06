@@ -3,7 +3,12 @@ services:
   uptime-kuma:
     image: louislam/uptime-kuma:latest
     container_name: uptime-kuma
+    hostname: uptime-kuma
     ports:
       - 3001:3001
+    environment:
+      PUID: 1000
+      PGID: 1000
     volumes:
       - ./data:/app/data
+    restart: unless-stopped
