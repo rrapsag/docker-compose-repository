@@ -1,14 +1,15 @@
-version: '3.7'
-
+---
 services:
   whoogle:
-    image: benbusby/whoogle-search
+    image: benbusby/whoogle-search:latest
     container_name: whoogle
     hostname: whoogle
     ports:
       - 5000:5000
     environment:
-      - WHOOGLE_CONFIG_LANGUAGE=$LANG
-    #  - WHOOGLE_USER=admin
-    #  - WHOOGLE_PASS=passwd
+      WHOOGLE_CONFIG_LANGUAGEL: lang_pt
+      #WHOOGLE_USER: admin
+      #WHOOGLE_PASS: passwd
+    volumes:
+      - ./config:/config
     restart: unless-stopped

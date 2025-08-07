@@ -1,5 +1,7 @@
 up:
 	clear
+	@mkdir -p ./config
+	@chmod 777 ./config
 	@docker-compose up -d
 
 down:
