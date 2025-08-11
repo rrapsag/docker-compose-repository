@@ -41,6 +41,7 @@ Repositório agrupando diversos exemplos de ambientes utilizando Docker e Docker
 * [Metube - Youtube Downloader](https://github.com/alexta69/metube)
 * [Calibre - E-book Management](https://calibre-ebook.com/)
 * [Calibre-Web - Web E-book Browsing](https://github.com/janeczku/calibre-web)
+* [Speedtest Tracker - Internet Monitor Connection](https://docs.speedtest-tracker.dev/)
 
 
 Para utilização de todos os ambientes, é necessário que o Docker e o Docker Compose estejam instalados no Linux.

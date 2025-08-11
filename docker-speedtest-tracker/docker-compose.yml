@@ -1,0 +1,27 @@
+---
+services:
+  speedtest-tracker:
+    image: ghcr.io/linuxserver/speedtest-tracker:latest
+    container_name: speedtest-tracker
+    hostname: speedtest-tracker
+    ports:
+      - 80:80
+    environment:
+      PUID: 1000
+      PGID: 1000
+      APP_TIMEZONE: "America/Sao_Paulo"
+      DISPLAY_TIMEZONE: "America/Sao_Paulo"
+      SPEEDTEST_SCHEDULE: '0 */2 * * *' # a cada 2 horas
+      SPEEDTEST_SERVERS: 22080, 16322 # make servers
+      DB_CONNECTION: sqlite
+      #APP_KEY: GERESUACHAVEECOLOQUEAQUI # make key
+      APP_KEY: base64:8Nqzyfwx8/AZyHeoozDDMoxTi9tyf2MWRRiDArCkLTg=
+    volumes:
+      - ./config:/config:rw
+    healthcheck:
+      test: timeout 10s bash -c ':> /dev/tcp/127.0.0.1/80' || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 90s
+    restart: unless-stopped
