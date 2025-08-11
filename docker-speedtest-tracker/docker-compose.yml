@@ -14,8 +14,7 @@ services:
       SPEEDTEST_SCHEDULE: '0 */2 * * *' # a cada 2 horas
       SPEEDTEST_SERVERS: 22080, 16322 # make servers
       DB_CONNECTION: sqlite
-      #APP_KEY: GERESUACHAVEECOLOQUEAQUI # make key
-      APP_KEY: base64:8Nqzyfwx8/AZyHeoozDDMoxTi9tyf2MWRRiDArCkLTg=
+      APP_KEY: GERESUACHAVEECOLOQUEAQUI # make key
     volumes:
       - ./config:/config:rw
     healthcheck:
